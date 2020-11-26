@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste over mærker</title>
+</head>
+<body>
+<h1>Liste over mærker</h1>
+<h4>Herunder tabellen der hedder "Bikes" prøver jeg at vise sammenhængen mellem Bike table og Brand table i databasen</h4>
+<h4>Jeg kunne dog ikke få det skrevet ud som læseligt tekst i denne omgang.</h4>
+<table class="tables" align="center">
+    <thead>
+    <tr>
+        <th>Brands</th>
+        <th>Bikes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="brand: ${brands}">
+        <td th:text="${brand.getName()}"></td>
+        <td th:text="${brand.getBikes()}"></td>
+    </tr>
+    </tbody>
+</table>
+<button onclick="window.location.href='/'">Gå til startside</button>
+</body>
+</html>

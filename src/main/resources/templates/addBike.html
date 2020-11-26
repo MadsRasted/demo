@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>add customer</title>
+</head>
+
+<body>
+
+<form action="#" th:action="@{/addBike}" th:object="${bike}" method="post">
+    <p>Model navn <input type="text" th:field="*{modelName}"/></p>
+    <p>Stel størrelse <input type="number" th:field="*{frameSize}"/></p>
+    <p>Hjul størrelse <input type="number" th:field="*{wheelSize}"/></p>
+
+
+    <input type="submit" value="Add" class="btn btn-create"/>
+</form>
+</div>
+<button onclick="window.location.href='/'">Gå til startside</button>
+</body>
+</html>
+

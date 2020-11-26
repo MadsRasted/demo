@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cykel liste</title>
+</head>
+<body>
+<h1>Cykel liste</h1>
+
+<table class="tables" align="center">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Modelname</th>
+        <th>Framesize</th>
+        <th>Wheelsize</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="bike: ${bikes}">
+        <td th:text="${bike.getId()}"></td>
+        <td th:text="${bike.getModelName()}"></td>
+        <td th:text="${bike.getFrameSize()}"></td>
+        <td th:text="${bike.getWheelSize()}"></td>
+    </tr>
+    </tbody>
+</table>
+<button onclick="window.location.href='/'">Gå til startside</button>
+</body>
+</html>
